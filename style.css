@@ -1,0 +1,440 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+body{
+    height: max-content;
+    width: 100%;
+}
+.div-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #313c4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-shortcut{
+    height: 260px;
+    width: 480px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    position: absolute;
+    top:30%;
+    z-index: 1;
+    background-color: #2d2d30;
+    box-shadow: rgba(0, 0, 0, 0.629) 0px 14px 28px, rgba(0, 0, 0, 0.629) 0px 10px 10px;
+    display: none;
+}
+.title{
+    font-size: 16px;
+    padding: 5px 0px 14px;
+    color: rgba(226, 226, 226, 0.858);
+    font-weight: bold;
+}
+.sub{
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: rgba(226, 226, 226, 0.858);
+    font-weight: bold;
+}
+.t-box{
+    width: 100%;
+    height: 37px;
+    border-radius: 8px 8px 0px 0px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    background-color: #a2aad637;
+    font-size: 13px;
+    padding: 2px 10px;
+    caret-color: #a3c9ff;
+    color: rgba(226, 226, 226, 0.858);
+}
+.t-box:focus{
+    border-bottom: 2px solid #a3c9ff;
+}
+.buttons{
+    margin-top: 10px;
+    float: right;
+}
+.buttons button{
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #a3c9ff;
+}
+.buttons button:hover{
+    cursor: pointer;
+}
+#c-btn{
+    color: #a3c9ff;
+    background-color: #2b2b2d;
+}
+#d-btn{
+    color: #2b2b2d;
+    background-color: #a3c9ff;
+}
+
+.div-box{
+    height: 300px;
+    width: 700px;
+    position: absolute;
+    top:20%;
+    z-index: 0;
+}
+.box-title{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bolder;
+}
+.f1{
+    color: #4285F4;
+}
+.f2{
+    color: #EA4335;
+}
+.f3{
+    color: #FBBC04;
+}
+.f4{
+    color: #34A853;
+}
+.box-search{
+    width: 100%;
+    height: 30%;
+}
+#input-box{
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0px 50px;
+    font-size: 18px;
+    color: rgb(33, 33, 33);
+    outline: none;
+    border:none;
+    font-family: "Kanit", sans-serif;
+}
+#input-box:focus{
+    box-shadow: skyblue 0px 0px 0px 2px, skyblue 0px 4px 6px -1px, skyblue 0px 1px 0px inset;
+}
+#icon-search{
+    color: rgb(45, 45, 45);
+    font-size: 20px;
+    position: relative;
+    top:35px;
+    left: 13px;
+}
+#icon-go{
+    color: #3a85fc;
+    font-size: 20px;
+    position: absolute;
+    top:156px;
+    right: 18px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+#icon-go:hover{
+    cursor: pointer;
+}
+.box-shortcut{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.div-sk1{
+    height: 100%;
+    width: 90px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.my-span{
+    height: 100%;
+    width: 90px;
+}
+.div-sk1:hover{
+    cursor: pointer;
+    background-color: #4f6179;
+}
+.div-sk1:hover ~.i-icon{
+    display: block;
+}
+.logo-1{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 8.5px;
+    background-image: url("chatgpt.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.text-1{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: whitesmoke;
+}
+.logo-2{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 8.5px;
+    background-image: url("github.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.text-2{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+/* dynamically add shortcur */
+.text{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: whitesmoke;
+}
+.logo{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    background-color: #34A853;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i-icon{
+    font-size: 12px;
+    color: whitesmoke;
+    position: relative;
+    z-index: 2;
+    top: -90px;
+    left: 73px;
+    padding: 3px;
+    display: none;
+}
+
+/*---------------*/
+.logo-add{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 8px;
+    color: whitesmoke;
+    background-color: #4f6179;
+}
+.logo-add i{
+    font-weight: 200;
+}
+.text-add{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+            /* Responsive design */
+
+@media(max-width:765px){
+    .div-box{
+        width: 92%;
+        height: 290px;
+    }
+    .box-title{
+        font-size: 70px;
+    }
+    #input-box{
+        height: 42px;
+        font-size: 16px;
+    }
+    #icon-search{
+        font-size: 18px;
+        position: relative;
+        top:33px;
+        left: 13px;
+    }
+    #icon-go{
+        font-size: 18px;
+        position: absolute;
+        top:147px;
+        right: 18px;
+    }
+    .box-shortcut{
+        width: 100%;
+        height: 30%;
+    }
+    .div-sk1{
+        height: 80px;
+        width: 70px;
+        border-radius: 5px;
+    }
+    .logo-1{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        font-size: 24px;
+        padding-top: 8.5px;
+    }
+    .text-1{
+        width: 100%;
+        height: 20px;
+        font-size: 10px;
+    }
+    .logo-2{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        font-size: 24px;
+        padding-top: 8.5px;
+    }
+    .text-2{
+        width: 100%;
+        height: 20px;
+        font-size: 10px;
+    }
+    .text{
+        width: 100%;
+        height: 20px;
+        font-size: 10px;
+    }
+    .logo{
+        height: 35px;
+        width: 35px;
+        font-size: 22px;
+    }
+    .logo-add{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        font-size: 24px;
+        padding-top: 5px;
+    }
+    .text-add{
+        width: 100%;
+        height: 20px;
+        font-size: 10px;
+    }
+    .add-shortcut{
+        height: 210px;
+        width: 360px;
+    }
+    .title{
+        font-size: 15px;
+        padding: 5px 0px 14px;
+    }
+    .sub{
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+    .t-box{
+        width: 100%;
+        height: 32px;
+        border-radius: 8px 8px 0px 0px;
+        margin-bottom: 12px;
+        font-size: 12px;
+        padding: 2px 10px;
+    }
+    .buttons{
+        margin-top: 3px;
+    }
+    .buttons button{
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .i-icon{
+        font-size: 11px;
+        top: -82px;
+        left: 55px;
+        padding: 2px;
+    }
+}
+@media(max-width:400px){
+    .div-sk1{
+        height: 75px;
+        width: 64px;
+        border-radius: 5px;
+    }
+    .logo-1{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        font-size: 22px;
+        padding-top: 8.5px;
+    }
+    .text-1{
+        width: 100%;
+        height: 20px;
+        font-size: 9px;
+    }
+    .logo-2{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        font-size: 22px;
+        padding-top: 8.5px;
+    }
+    .text-2{
+        width: 100%;
+        height: 20px;
+        font-size: 9px;
+    }
+    .text{
+        width: 100%;
+        height: 20px;
+        font-size: 9px;
+    }
+    .logo{
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+    }
+    .logo-add{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        font-size: 22px;
+        padding-top: 5px;
+    }
+    .text-add{
+        width: 100%;
+        height: 20px;
+        font-size: 9px;
+    }
+    .i-icon{
+        font-size: 9px;
+        top: -78px;
+        left: 52px;
+        padding: 1px;
+    }
+}

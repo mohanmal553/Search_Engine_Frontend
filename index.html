@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Glegoo:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
+        rel="stylesheet">
+
+    <!-- font aewsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>Search Engine</title>
+</head>
+
+<body>
+    <div class="div-container">
+        <div class="add-shortcut">
+            <form>
+                <div class="title">Add shortcut</div>
+                <div class="sub">Name</div>
+                <input type="text" class="t-box" id="text-title"><br>
+                <div class="sub">URL</div>
+                <input type="text" class="t-box" id="text-link"><br>
+                <div class="buttons">
+                    <button id="c-btn">Cancel</button>
+                    <button id="d-btn">Done</button>
+                </div>
+            </form>
+        </div>
+        <div class="div-box">
+            <div class="box-title">
+                <font class="f1">G</font><font class="f2">o</font><font class="f3">o</font><font class="f1">g</font><font class="f4">l</font><font class="f2">e</font>
+            </div>
+            <div class="box-search">
+                <form>
+                    <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
+                    <input type="text" placeholder="Search anything" id="input-box">
+                    <button type="submit" id="icon-go"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+            <div class="box-shortcut">
+                <div class="div-sk1">
+                    <div class="logo-1"></div>
+                    <div class="text-1">ChatGPT</div>
+                </div>
+                <div class="div-sk1">
+                    <div class="logo-2"></div>
+                    <div class="text-2">GitHub</div>
+                </div>
+
+                <!-- Add dynamically  -->
+                <span class="my-span">
+                <div class="div-sk1 my-child" id="div-youtube">
+                    <div class="logo"><span id="span-youtube">y</span></div>
+                    <div class="text" id="text-youtube">youtu</div>
+                </div>
+                <i class="fa-solid fa-trash i-icon"></i>
+                </span>
+                
+
+                <div class="div-sk1" id="add-shortcut-btn">
+                    <div class="logo-add"><i class="fa-solid fa-plus"></i></div>
+                    <div class="text-add">Add shortcut</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
