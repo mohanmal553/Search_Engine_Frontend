@@ -152,6 +152,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+.my-span{
+    height: 100%;
+    width: 90px;
+    border-radius: 5px;
+}
 .div-sk1{
     height: 100%;
     width: 90px;
@@ -162,16 +167,13 @@ body{
     align-items: center;
     position: relative;
 }
-.my-span{
-    height: 100%;
-    width: 90px;
-}
 .div-sk1:hover{
     cursor: pointer;
     background-color: #4f6179;
 }
-.div-sk1:hover ~.i-icon{
-    display: block;
+.my-span:hover{
+    cursor: pointer;
+    background-color: #4f6179;
 }
 .logo-1{
     height: 45px;
@@ -232,14 +234,15 @@ body{
     align-items: center;
 }
 .i-icon{
-    font-size: 12px;
+    font-size: 14px;
     color: whitesmoke;
     position: relative;
     z-index: 2;
+    /* top: -35px;
+    right: 18px; */
     top: -90px;
     left: 73px;
     padding: 3px;
-    display: none;
 }
 
 /*---------------*/
@@ -374,6 +377,8 @@ body{
     }
     .i-icon{
         font-size: 11px;
+        /* top: -30px;
+        right: 15px; */
         top: -82px;
         left: 55px;
         padding: 2px;
@@ -433,6 +438,8 @@ body{
     }
     .i-icon{
         font-size: 9px;
+        /* top: -30px;
+        right: 10px; */
         top: -78px;
         left: 52px;
         padding: 1px;
